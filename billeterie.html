@@ -14,7 +14,6 @@
             <nav>
                 <a href="index.html">ACCUEIL</a>
                 <a href="oeuvres.html">OEUVRES</a>
-                <a href="contact.html">CONTACT</a>
                 <a href="billeterie.html">BILLETERIE</a>
                 <a href="Actualités.html">ACTUALITES</a>
                 <a href="compte.html"><img src="1270000.webp" alt="Compte" class="nav-icon"></a>
@@ -31,6 +30,56 @@
         <main>
             <h1>Billeterie</h1>
             <p>Découvrez nos tarifs et réservez vos billets pour visiter nos expositions.</p>
+            <section class="reservation-container">
+                <h2>Réserver une visite</h2>
+                <form id="reservation-form" class="reservation-form">
+                    <div class="form-row">
+                        <label for="visit-date">Date de visite</label>
+                        <input type="date" id="visit-date" name="date" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="time-slot">Créneau horaire</label>
+                        <select id="time-slot" name="time" required>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="tickets-count">Nombre de billets</label>
+                        <input type="number" id="tickets-count" name="count" min="1" max="10" value="1" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="ticket-type">Type de billet</label>
+                        <select id="ticket-type" name="type">
+                            <option value="adult">Adulte</option>
+                            <option value="reduced">Réduit</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="visitor-name">Nom du visiteur</label>
+                        <input type="text" id="visitor-name" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="visitor-email">Email</label>
+                        <input type="email" id="visitor-email" name="email" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="reserve-button">Réserver</button>
+                    </div>
+                </form>
+
+                <div id="reservation-confirm" class="reservation-confirm" aria-live="polite"></div>
+            </section>
         </main>
 
         <footer>

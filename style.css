@@ -301,3 +301,142 @@ footer {
     }
 }
 
+/* Styles pour la billeterie / réservation */
+.reservation-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.reservation-container h2 {
+    color: #2faee0;
+    margin-top: 0;
+}
+
+.reservation-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.reservation-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.reservation-form input[type="date"],
+.reservation-form input[type="number"],
+.reservation-form input[type="text"],
+.reservation-form input[type="email"],
+.reservation-form select {
+    padding: 10px;
+    border: 2px solid #BEA064;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 16px;
+    text-align: left;
+}
+
+.reserve-button {
+    padding: 12px 18px;
+    background-color: #2faee0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.reserve-button:hover { background-color: #1a8fa8; }
+
+.reservation-confirm {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 6px;
+    background: #e9fff2;
+    border: 1px solid #b7f0d1;
+    color: #064d31;
+}
+
+@media (max-width: 480px) {
+    .reservation-container { padding: 12px; }
+}
+
+/* Feedback et compte utilisateur */
+.oeuvre-feedback {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid #e0d4b3;
+    border-radius: 8px;
+    background: #f7f9fc;
+}
+
+.feedback-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feedback-comment {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 12px;
+}
+
+.feedback-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.feedback-button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.like-button {
+    background: #2faee0;
+    color: white;
+}
+
+.dislike-button {
+    background: #f06f6f;
+    color: white;
+}
+
+.feedback-message {
+    min-height: 18px;
+    font-size: 14px;
+}
+
+.account-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.liked-work-card {
+    padding: 16px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: white;
+}
+
+.liked-work-card h3 {
+    margin-top: 0;
+}
+
