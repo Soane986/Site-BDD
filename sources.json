@@ -1,0 +1,30 @@
+{
+	"artists": [
+		{
+			"id": "a1",
+			"name": "Claude Monet",
+			"bio": "Peintre impressionniste français, connu pour ses séries de paysages et de nymphéas."
+		},
+		{
+			"id": "a2",
+			"name": "Pablo Picasso",
+			"bio": "Peintre et sculpteur espagnol, figure majeure de l'art moderne."
+		}
+	],
+	"oeuvres": [
+		{
+			"id": "o1",
+			"title": "Nymphéas",
+			"artistId": "a1",
+			"year": 1916,
+			"image": "nympheas.jpg"
+		},
+		{
+			"id": "o2",
+			"title": "Les Demoiselles d'Avignon",
+			"artistId": "a2",
+			"year": 1907,
+			"image": "demoiselles.jpg"
+		}
+	]
+}

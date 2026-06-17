@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Réservations</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        table th {
+            background-color: #2faee0;
+            color: white;
+        }
+        table tr:hover {
+            background-color: #f5f5f5;
+        }
+        .admin-msg {
+            padding: 12px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+        }
+        .admin-msg.error {
+            background: #ffe9e9;
+            color: #5d1212;
+        }
+        .admin-msg.success {
+            background: #e9fff2;
+            color: #064d31;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .stat-card {
+            padding: 16px;
+            background: #f9f9f9;
+            border: 1px solid #e6e6e6;
+            border-radius: 4px;
+        }
+        .stat-card h3 {
+            margin: 0 0 8px 0;
+            color: #2faee0;
+        }
+        .stat-card .value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Musée Fabi - Admin</div>
+        <nav>
+            <a href="index.html">ACCUEIL</a>
+            <a href="oeuvres.html">OEUVRES</a>
+            <a href="billeterie.html">BILLETERIE</a>
+            <a href="Actualités.html">ACTUALITES</a>
+            <a href="compte.html" onclick="logoutAdmin(event)">DÉCONNEXION</a>
+        </nav>
+        <div class="language-selector">
+            <select id="language" onchange="changeLanguage(this.value)">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+                <option value="es">ES</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="admin-container">
+        <h1>Gestion des Réservations</h1>
+        <div id="admin-message" class="admin-msg" style="display:none;"></div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Total réservations</h3>
+                <div class="value" id="stat-total">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Revenus totaux</h3>
+                <div class="value" id="stat-revenue">0€</div>
+            </div>
+            <div class="stat-card">
+                <h3>Billets vendus</h3>
+                <div class="value" id="stat-tickets">0</div>
+            </div>
+        </div>
+
+        <table id="reservations-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Heure</th>
+                    <th>Billets</th>
+                    <th>Type</th>
+                    <th>Total</th>
+                    <th>Date création</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>À propos</h3>
+                <p>Le Musée Fabi est un espace dédié à l'art et à la culture.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horaires</h3>
+                <p>Lundi - Dimanche: 9h00 - 18h00</p>
+                <p>Fermé les jours fériés</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Tél: +33 (0)1 23 45 67 89</p>
+                <p>Email: info@museefabi.fr</p>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Musée Fabi. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
