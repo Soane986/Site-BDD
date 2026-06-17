@@ -10,12 +10,56 @@
     </head>
     <body>
         <header>
-        <nav>
-            <a href="index.html">ACCEUIL</a>
-            <a href="oeuvres.html">OEUVRES</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="billeterie.html">BILLETERIE</a>
-            <a href="actualités.html">ACTUALITES</a>
-            <a href="compte.html"><img src="1270000.webp" alt="Compte" class="nav-icon"></a>
-        </nav>
-    </header>
+            <div class="logo">Musée Fabi</div>
+            <nav>
+                <a href="index.html">ACCUEIL</a>
+                <a href="oeuvres.html">OEUVRES</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="billeterie.html">BILLETERIE</a>
+                <a href="Actualités.html">ACTUALITES</a>
+                <a href="compte.html"><img src="1270000.webp" alt="Compte" class="nav-icon"></a>
+            </nav>
+            <div class="language-selector">
+                <select id="language" onchange="changeLanguage(this.value)">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <h1>Nos Oeuvres</h1>
+            <p>Explorez notre collection d'oeuvres d'art exceptionnelles et inspirantes.</p>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>Le Musée Fabi est un espace dédié à l'art et à la culture.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lundi - Dimanche: 9h00 - 18h00</p>
+                    <p>Fermé les jours fériés</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Tél: +33 (0)1 23 45 67 89</p>
+                    <p>Email: info@museefabi.fr</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Musée Fabi. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
