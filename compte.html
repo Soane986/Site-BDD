@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musée fabi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">Musée Fabi</div>
+            <nav>
+                <a href="index.html">ACCUEIL</a>
+                <a href="oeuvres.html">OEUVRES</a>
+                <a href="billeterie.html">BILLETERIE</a>
+                <a href="Actualités.html">ACTUALITES</a>
+                <a href="compte.html"><img src="1270000.webp" alt="Compte" class="nav-icon"></a>
+            </nav>
+            <div class="language-selector">
+                <select id="language" onchange="changeLanguage(this.value)">
+                    <option value="fr">FR</option>
+                    <option value="en">EN</option>
+                    <option value="es">ES</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <div class="login-container">
+                <h1>Connexion à votre compte</h1>
+                <form class="login-form" onsubmit="loginUser(event)">
+                    <div class="form-group">
+                        <label for="email">Adresse email:</label>
+                        <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" id="password" name="password" required placeholder="Entrez votre mot de passe">
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="remember" name="remember" value="remember">
+                        <label for="remember">Se souvenir de moi</label>
+                    </div>
+                    <button type="submit" class="login-button">Connexion</button>
+                </form>
+
+                <hr>
+
+                <h2>Créer un compte</h2>
+                <form id="register-form" onsubmit="registerUser(event)">
+                    <div class="form-group">
+                        <label for="reg-name">Nom complet:</label>
+                        <input type="text" id="reg-name" name="name" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">Adresse email:</label>
+                        <input type="email" id="reg-email" name="email" required placeholder="votre.email@exemple.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Mot de passe:</label>
+                        <input type="password" id="reg-password" name="password" required placeholder="Choisissez un mot de passe">
+                    </div>
+                    <button type="submit" class="login-button">Créer un compte</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>Le Musée Fabi est un espace dédié à l'art et à la culture.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lundi - Dimanche: 9h00 - 18h00</p>
+                    <p>Fermé les jours fériés</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Tél: +33 (0)1 23 45 67 89</p>
+                    <p>Email: info@museefabi.fr</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Musée Fabi. Tous droits réservés.</p>
+            </div>
+        </footer>
+

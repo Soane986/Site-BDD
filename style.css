@@ -1,0 +1,442 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+}
+
+header {
+    background-color: #2faee0;
+    width: 100%;
+    min-height: 120px;
+    padding: 20px 20px;
+    margin: 0;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 5px solid #BEA064;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 40px;
+}
+
+body.home header nav {
+    justify-content: flex-start;
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 10px;
+    font-family: 'Arial sans-serif', sans-serif;
+    font-size: 24px;
+    transition: color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
+}
+
+header nav a img.nav-icon {
+    width: 30px;
+    height: auto;
+    display: block;
+}
+
+header nav a:hover {
+    color: #032b3c;
+    transform: scale(1.2);
+}
+
+/* Logo dans le header */
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin-right: auto;
+    margin-left: 40px;
+}
+
+/* Sélecteur de langue */
+.language-selector {
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: white;
+    color: #2faee0;
+    border: 2px solid #BEA064;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-selector select:hover {
+    background-color: #BEA064;
+    color: white;
+}
+
+/* Main content */
+main {
+    min-height: calc(100vh - 240px);
+    padding: 40px 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2faee0;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-top: 5px solid #BEA064;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.footer-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 0;
+    color: #BEA064;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: 1px solid white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: white;
+    color: #2faee0;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    font-size: 14px;
+}
+
+/* Formulaire de connexion */
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: #2faee0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #BEA064;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    outline: none;
+    border-color: #2faee0;
+    box-shadow: 0 0 5px rgba(47, 174, 224, 0.3);
+}
+
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.form-group.checkbox input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.form-group.checkbox label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.login-button {
+    padding: 12px;
+    background-color: #2faee0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: Arial, sans-serif;
+}
+
+.login-button:hover {
+    background-color: #1a8fa8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(47, 174, 224, 0.3);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.login-links a {
+    color: #2faee0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+    color: #1a8fa8;
+    text-decoration: underline;
+}
+
+.login-links span {
+    margin: 0 10px;
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        min-height: auto;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    header nav {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .language-selector {
+        margin-left: 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .login-container {
+        margin: 30px 10px;
+        padding: 20px;
+    }
+}
+
+/* Styles pour la billeterie / réservation */
+.reservation-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.reservation-container h2 {
+    color: #2faee0;
+    margin-top: 0;
+}
+
+.reservation-form .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.reservation-form label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.reservation-form input[type="date"],
+.reservation-form input[type="number"],
+.reservation-form input[type="text"],
+.reservation-form input[type="email"],
+.reservation-form select {
+    padding: 10px;
+    border: 2px solid #BEA064;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-actions {
+    margin-top: 16px;
+    text-align: left;
+}
+
+.reserve-button {
+    padding: 12px 18px;
+    background-color: #2faee0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.reserve-button:hover { background-color: #1a8fa8; }
+
+.reservation-confirm {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 6px;
+    background: #e9fff2;
+    border: 1px solid #b7f0d1;
+    color: #064d31;
+}
+
+@media (max-width: 480px) {
+    .reservation-container { padding: 12px; }
+}
+
+/* Feedback et compte utilisateur */
+.oeuvre-feedback {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid #e0d4b3;
+    border-radius: 8px;
+    background: #f7f9fc;
+}
+
+.feedback-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.feedback-comment {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 12px;
+}
+
+.feedback-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.feedback-button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.like-button {
+    background: #2faee0;
+    color: white;
+}
+
+.dislike-button {
+    background: #f06f6f;
+    color: white;
+}
+
+.feedback-message {
+    min-height: 18px;
+    font-size: 14px;
+}
+
+.account-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.liked-work-card {
+    padding: 16px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    background: white;
+}
+
+.liked-work-card h3 {
+    margin-top: 0;
+}
+
